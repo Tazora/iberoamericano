@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/post.njk",
+  "permalink": "veranstaltungen/{{ title | slug }}/index.html",
+  "author": "Anonymous",
+  "tags": ["veranstaltung"]
+}

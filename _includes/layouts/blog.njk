@@ -1,11 +1,21 @@
 ---
 layout: layouts/base.njk
-section: blog
-permalink: /blog/index.html
+section: veranstaltungen
+permalink: /veranstaltungen/index.html
 ---
 <h1>{{ title }}</h1>
 
 {{ layoutContent | safe }}
 
-{% set postslist = collections.post %}
+{% set postslist = collections.veranstaltung %}
 {% include "components/postslist.njk" %}
+
+<h2>Was wir machen</h2>
+
+<ul>
+    <li>Wir treffen uns zum lockeren Gespräch. Raum 16, 3. Samstag im Monat, 16 Uhr.</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>

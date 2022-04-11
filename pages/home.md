@@ -1,20 +1,38 @@
 ---
 layout: layouts/home.njk
 title: Home
-date: 2016-01-01T00:00:00.000Z
+date: 2022-01-01T00:00:00.000Z
 permalink: /
 eleventyNavigation:
   key: Home
   order: 0
 ---
-# Welcome
 
-This is a template for building a simple blog website with the [Eleventy static site generator](https://www.11ty.io), with deployment to [Netlify](https://www.netlify.com).
+![Spanische Flagge](/static/img/flagge.jpg)
+# Spanisch sprechende Gruppe und brasilianische Gruppe
 
-Includes [Netlify CMS](https://www.netlifycms.org) for WYSIWYG content editing, and [Netlify Forms](https://www.netlify.com/docs/form-handling) for processing your site's form data.
+**Wer wir sind:** Wir sind eine Gruppe aus verschiedenen spanischsprachigen Ländern, die in Duisburg und Umgebung leben. Wir pflegen unsere spanische Muttersprache, unsere Kultur, Musik sowie Landeskunde aus den verschiedenen Ländern Lateinamerikas und Spanien.
 
-For more info on installation and usage, view the [project repo]({{ pkg.repository.url }}) on GitHub.
+**Quienes somos:** Somos un grupo de diferentes paises de habla hispana que viven en Duisburg y sus alrededores. Nuestro objetivo es transmitir nuestro idioma, cultura y música.
 
-Or click the button below to deploy your own copy of this project to Netlify.
+## [Eventos actuales | Aktuelle Veranstaltungen](/veranstaltungen)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
+## Bienvenidos ...
+... todos aquellos interesados en nuestras diferentes culturas, variedad de música, gastronomía y forma de ser.
+
+## Willkommen ...
+... ist jeder, der unsere Sprachen üben und vertiefen will und Interesse an den verschiedenen Kulturen und unserer Musik hat. Willkommen ist darüber hinaus jeder, der unser Temperament mag.
+
+## Información
+
+IZ Centro Internacional
+Flachsmarkt 15
+(Innenhafen, cerca del ayuntamiento)
+Tel. 0203 - 283 3962 ó 4321
+
+## Information
+
+Internationales Zentrum der VHS
+Flachsmarkt 15
+(Innenhafen, Nähe Rathaus)
+Tel. 0203 - 283 3962 oder 4321
