@@ -8,8 +8,8 @@ eleventyNavigation:
   order: 0
 ---
 
-![Spanische Flagge](/static/img/flagge.jpg)
-# Spanisch sprechende Gruppe und brasilianische Gruppe
+![Peruanische Berglandschaft](/static/img/peru.jpg)
+# Grupo iberoamericano
 
 **Wer wir sind:** Wir sind eine Gruppe aus verschiedenen spanischsprachigen Ländern, die in Duisburg und Umgebung leben. Wir pflegen unsere spanische Muttersprache, unsere Kultur, Musik sowie Landeskunde aus den verschiedenen Ländern Lateinamerikas und Spanien.
 
