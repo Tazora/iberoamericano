@@ -164,7 +164,7 @@ header div {
 }
 
 header div a[href] {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xl);
   font-weight: 500;
   text-transform: uppercase;
   color: var(--secondary);
@@ -344,7 +344,7 @@ h3 {
 }
 
 h3 a[href] {
-  color: var(--white);
+  color: var(--background);
   background-color: var(--secondary);
   padding: 0.1em;
   padding-left: 0.64em;
