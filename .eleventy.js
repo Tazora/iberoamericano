@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+const { DateTime, Settings } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
@@ -36,9 +36,11 @@ module.exports = function (eleventyConfig) {
     }, {});
   });
 
+  Settings.defaultLocale = "de";
+
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
+    return DateTime.fromJSDate(dateObj).toFormat("f");
   });
 
   // Date formatting (machine readable)

@@ -5,9 +5,9 @@ section: veranstaltung
 
 <article>
   <h1>{{ title }}</h1>
-  <p>
+  <p class="post-date">
     <small>
-      <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
+      <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time>
     </small>
   </p>
 
@@ -15,17 +15,17 @@ section: veranstaltung
 
   {% if tags %}
     <p>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
+      {% for tag in tags %}
+        {%- if tag != "post" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        {%- endif -%}
+      {% endfor %}
     </p>
   {% endif %}
 
 </article>
 
 <nav>
-  <a href="{{ '/blog/' | url }}">← Übersicht Veranstaltungen</a>
+  <a href="{{ '/veranstaltungen/' | url }}">← Übersicht der Veranstaltungen</a>
 </nav>
