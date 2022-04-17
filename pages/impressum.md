@@ -7,4 +7,15 @@ permalink: /impressum/index.html
 
 # Impressum
 
-Neben den Veranstaltungen in der unteren Liste bieten wir auch einige <a href="#treffen">regelmäßige Treffen</a> an. Schau einfach mal vorbei!
+## Diensteanbieter
+
+Irene Stabel
+Straße Hausnummer
+Postleitzahl Duisburg
+
+## Kontaktmöglichkeiten
+
+E-Mail-Adresse: [info@iberoamericano.de](mailto:info@iberoamericano.de)
+Kontaktformular: [https://iberoamericano.de/kontakt](https://iberoamericano.de/kontakt)
+
+Erstellt mit dem kostenlosem [Datenschutz-Generator.de](https://datenschutz-generator.de/) von Dr. Thomas Schwenke
