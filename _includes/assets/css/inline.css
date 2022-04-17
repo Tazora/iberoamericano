@@ -414,3 +414,7 @@ main > p + p {
     color: var(--secondary);
   }
 }
+
+.w-full {
+  width: 100%;
+}

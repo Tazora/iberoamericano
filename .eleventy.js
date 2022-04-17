@@ -3,6 +3,7 @@ const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
@@ -17,6 +18,40 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
+
+  async function imageShortcode(src, alt, classes = "w-full", sizes = "100vw") {
+    if (alt === undefined) {
+      // You bet we throw an error on missing alt (alt="" works okay)
+      throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+    }
+
+    let metadata = await Image(src, {
+      widths: [200, 400, 700],
+      formats: ["avif", "webp", "jpeg"],
+      outputDir: "_site/static/img/",
+    });
+    let lowsrc = metadata.jpeg[0];
+
+    return `<picture>
+      ${Object.values(metadata)
+        .map((imageFormat) => {
+          return `  <source type="${
+            imageFormat[0].sourceType
+          }" srcset="${imageFormat
+            .map((entry) => `/static${entry.srcset}`)
+            .join(", ")}" sizes="${sizes}">`;
+        })
+        .join("\n")}
+        <img
+          src="/static${lowsrc.url}"
+          alt="${alt}"
+          ${classes ? `class="${classes}"` : ""}
+          loading="lazy"
+          decoding="async"
+          width="${lowsrc.width}"
+          height="${lowsrc.height}">
+      </picture>`;
+  }
 
   // Add support for maintenance-free post authors
   // Adds an authors collection using the author key in our post frontmatter
@@ -76,8 +111,38 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addTransform(
+    "responsiveImg",
+    async function (content, inputPath, outputPath) {
+      if (inputPath.endsWith(".html")) {
+        const regexp = /<img.+?>/gs;
+        const matchingWords = content.matchAll(regexp);
+        for (const matchingWord of matchingWords) {
+          const word = matchingWord[0];
+          const imgSrc = "." + word.match(/(?<=src=").+?(?=")/g);
+          const imgAlt = word.match(/(?<=alt=").+?(?=")/g);
+          const imgClass = word.match(/(?<=class=").+?(?=")/g) ?? "";
+          const replacedImage = await imageShortcode(
+            imgSrc,
+            imgAlt,
+            imgClass[0]
+          );
+          content = content.replace(word, replacedImage);
+        }
+        return content;
+      }
+      return content;
+    }
+  );
+
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("favicon-16x16.png");
+  eleventyConfig.addPassthroughCopy("favicon-32x32.png");
+  eleventyConfig.addPassthroughCopy("android-chrome-192x192.png");
+  eleventyConfig.addPassthroughCopy("android-chrome-512x512.png");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
   eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/css");
