@@ -499,3 +499,24 @@ aside {
     margin: var(--font-size-lg);
   }
 }
+
+@media screen and (min-width: 1600px) {
+  header div,
+  main,
+  footer,
+  aside {
+    margin-left: calc(2 * var(--font-size-xxxl));
+  }
+
+  h3 a[href] {
+    padding: 0.1em;
+    padding-left: calc(4 * var(--font-size-xxxl));
+    padding-right: 0.25em;
+    margin-left: calc(-4 * var(--font-size-xxxl));
+  }
+
+  header nav,
+  aside {
+    margin-right: calc(3 * var(--font-size-xl));
+  }
+}
