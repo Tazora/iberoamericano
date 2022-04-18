@@ -1,0 +1,52 @@
+{
+  "spanisch": {
+    "title": "Que hacemos",
+    "treffen": [
+      {
+        "text": "Nos encontramos para conversar e intercambiar ideas. Sala 16.",
+        "time": "3. sábado al mes, 16 hrs."
+      },
+      {
+        "text": "Para los amantes de la música tenemos nuestro coro para gente con o sin experiencia, dirigido por el tenor colombiano Hernando Riano. Sala 22.",
+        "time": "Sábado 15-17 hrs."
+      },
+      {
+        "text": "El grupo de teatro \"La Cotorra\" practica en la sala 16. Interesados son muy bienvenidos.",
+        "time": "Miércoles, 19-22 hrs."
+      },
+      {
+        "text": "Tenemos 2 grupos de ninos, donde aprenden el espanol jugando: Sábado en la sala 15. Jueves en la sala común en la Karmelkirche, Brüderplaz No. 1.",
+        "time": "Sábado 10:30-12 hrs, jueves 16-17:30 hrs."
+      },
+      {
+        "text": "El grupo brasilero se encuentra con un programa similar al nuestro en la sala 16.",
+        "time": "2. sábado al mes 17 hrs."
+      }
+    ]
+  },
+  "deutsch": {
+    "title": "Was wir machen",
+    "treffen": [
+      {
+        "text": "Wir treffen uns zum lockeren Gespräch. Raum 16.",
+        "time": "3. Samstag im Monat, 16 Uhr."
+      },
+      {
+        "text": "Für die Liebhaber der Musik gibt es einen Chor für Leute mit und ohne Erfahrung. Chorleiter ist der kolumbianische Tenor Hernando Riano. Raum 22.",
+        "time": "Samstags, 15-17 Uhr."
+      },
+      {
+        "text": "Die Theatergruppe \"La Cotorra\" übt im Raum 16. Interessenten sind herzlich willkommen.",
+        "time": "Mittwochs 19-22 Uhr."
+      },
+      {
+        "text": "Es gibt 2 Multikulti Kindergruppen, in der spielend Spanisch gelernt wird. Samstags im Raum 15, Donnerstags im Gruppenraum der Karmelkirche am Brüderplatz 1.",
+        "time": "Samstags, 10:30-12 Uhr und donnerstags 16-17:30 Uhr."
+      },
+      {
+        "text": "Die brasilianische Gruppe trifft sich mit einem vergleichbarem Programm im Raum 16.",
+        "time": "2. Samstag im Monat, 17 Uhr."
+      }
+    ]
+  }
+}

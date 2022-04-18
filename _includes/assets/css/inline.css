@@ -343,6 +343,13 @@ main > h2 + p {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+main > h3 + p {
+  border: 0px solid var(--primary);
+  background-color: var(--background);
+  padding: 1em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 h1 {
   font-size: var(--font-size-xxl);
   margin: 0;

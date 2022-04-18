@@ -1,0 +1,16 @@
+<aside>
+    <h2>{{ treffen.deutsch.title }}</h2>
+    <ul>
+        {% for eintrag in treffen.deutsch.treffen %}
+            <li>{{ eintrag.text }} | <strong>{{ eintrag.time }}</strong>
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>{{ treffen.spanisch.title }}</h2>
+    <ul>
+        {% for eintrag in treffen.spanisch.treffen %}
+            <li>{{ eintrag.text }} | <strong>{{ eintrag.time }}</strong>
+            </li>
+        {% endfor %}
+    </ul>
+</aside>

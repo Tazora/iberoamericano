@@ -6,6 +6,7 @@ backend:
 # publish_mode: editorial_workflow
 
 media_folder: "static/img" # Media files will be stored in the repo under images/uploads
+locale: "de"
 
 collections:
   # Our blog posts
@@ -17,7 +18,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime" }
-      - { label: "Ort", name: "location", widget: "text" }
+      - { label: "Ort", name: "location", widget: "string" }
       - { label: "Zusammenfassung", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Inhalt", name: "body", widget: "markdown" }
